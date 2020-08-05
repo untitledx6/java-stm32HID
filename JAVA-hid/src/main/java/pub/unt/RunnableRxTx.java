@@ -12,11 +12,11 @@ public class RunnableRxTx implements Runnable {
    public RunnableRxTx(DataDeal dataRxTx, String threadName) {
       workType = threadName;
       dataDealClass = dataRxTx;
-      System.out.println("Creating " +  threadName);
+      //System.out.println("Creating " +  threadName);
    }
     
    public void run() {
-      System.out.println("Running " +  workType);
+      //System.out.println("Running " +  workType);
       if(workType.equals("transmit")) {
          Scanner scan = new Scanner(System.in);
          while(true) {
@@ -38,7 +38,7 @@ public class RunnableRxTx implements Runnable {
    }
     
    public void start () {
-      System.out.println("Starting " +  workType);
+      //System.out.println("Starting " +  workType);
       if (t == null) {
          t = new Thread(this, workType);
          t.start ();
